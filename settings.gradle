@@ -1,0 +1,9 @@
+include 'AssertJ_Hamcrest'
+include 'Date_Test'
+include 'Fixtures'
+include 'Initial_Test'
+include 'TDD_Init'
+include 'TestNG_Test'
+include 'CocktailsAndDrinks_Init'
+include 'Testng'
+

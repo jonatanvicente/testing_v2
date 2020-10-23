@@ -1,0 +1,51 @@
+package org.cd.repository;
+
+
+import org.cd.bo.Drink;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Optional;
+
+import static junit.framework.TestCase.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
+
+/**
+ * Unit test - Repository Layer
+ */
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class IRepositoryUnitTest {
+
+    @Autowired
+    private TestEntityManager testEntityManager;
+
+    @Autowired
+    private IRepository iRepository;
+
+    @Test
+    public void findByIdTest(){
+        //persist
+        Drink drink = new Drink();
+        drink.setCategoria("Agua");
+        iRepository.saveAndFlush(drink);
+
+        //test
+        Optional<Drink> found = iRepository.findById(21);//last value
+        assertThat(found.get().getCategoria()).isEqualTo(drink.getCategoria());
+
+    }
+
+
+    @Test
+    public void findByCategoriaTest(){
+        Optional<Drink> found = iRepository.findByCategoria("Whiskey");
+        assertThat(found.get().getId_vino()).isEqualTo(15);
+    }
+    
+}

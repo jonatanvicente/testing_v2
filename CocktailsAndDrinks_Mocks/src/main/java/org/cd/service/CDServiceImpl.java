@@ -9,23 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CDService{
+public class CDServiceImpl implements ICDService{
 
 	@Autowired
 	private IRepository tp;
 
-	@Autowired
-	private ExternalService externalService;
-	
-	
+	@Override
 	public List<Drink> getAllTypes(){
 		return tp.findAll();
 	}
-	
 
-	public int getPrice(int idDrink){
-		return externalService.getStocks(idDrink);
-	}
 }
 
 

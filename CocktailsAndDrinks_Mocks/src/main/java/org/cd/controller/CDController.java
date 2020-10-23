@@ -2,14 +2,11 @@ package org.cd.controller;
 
 import java.util.List;
 
-import org.cd.bo.TiposVinos;
+import org.cd.bo.Drink;
 import org.cd.service.CDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class CDController {
@@ -19,16 +16,15 @@ public class CDController {
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String test() {
-		return "hola pp";
+		return "hello world";
 	}
 
-	@RequestMapping(value = "/vino/all", method = RequestMethod.GET)
-	public ResponseEntity<List<TiposVinos>> types() {
-/*
-		List<TiposVinos> list = service.getAllTiposVinos();
-		return ResponseEntity.ok(list);*/
+	@RequestMapping(value = "/drink/all", method = RequestMethod.GET)
+	public ResponseEntity<List<Drink>> types() {
 
-		return null;
+		List<Drink> types = service.getAllTypes();
+		return types == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(types);
 	}
-	 
+
+
 }

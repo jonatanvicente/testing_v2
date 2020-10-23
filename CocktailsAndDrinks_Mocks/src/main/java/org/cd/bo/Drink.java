@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity(name="tipos_vinos")
-public class TiposVinos implements Serializable{
+public class Drink implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,7 +19,6 @@ public class TiposVinos implements Serializable{
 	private int id_vino;
 	
 	private String categoria;
-	
 
 	public int getId_vino() {
 		return id_vino;

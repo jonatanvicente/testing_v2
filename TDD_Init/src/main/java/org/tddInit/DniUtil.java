@@ -4,7 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DniUtil{
-	
+
+
+	public static void main(String ar[]){
+	   System.out.println(calcNif(53041447));
+	}
+
+
 	private static Map<Integer, String> letras = new HashMap<Integer, String>();
 	
 	public static String calcNif(int dni){

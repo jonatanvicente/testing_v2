@@ -2,7 +2,18 @@ package org.TestNG_Test;
 
 public class Ejemplito {
 
+	final static int NUMBER = 2;
 
+	public static void main(String ar[]){
+		multiplicaPorDos(NUMBER);
+		multiplicaPorTres(NUMBER);
+		multiplicaPorCuatro(NUMBER);
+		multiplicaPorCinco(NUMBER);
+		multiplicaPorSeis(NUMBER);
+		multiplicaPorSiete(NUMBER);
+		multiplicaPorOcho(NUMBER);
+		multiplicaPorNueve(NUMBER);
+	}
 	/**
 	 * Método que multiplica por dos un número.
 	 * @param numero. El número a plumiticar por dos.

@@ -75,7 +75,7 @@ public class EjemplitoTest {
 	@Test
 	@Parameters({"param_test"})
 	public void multiplicaPorCuatro(int paramTest) {
-		Assert.assertNotNull(Ejemplito.multiplicaPorCuatro(paramTest));
+		Assert.assertNotNull(Ejemplito.multiplicaPorCuatro(4));
 		Assert.assertEquals(Ejemplito.multiplicaPorCuatro(paramTest), paramTest*4);
 	}
 
@@ -85,12 +85,12 @@ public class EjemplitoTest {
 		//Assert.assertEquals(Ejemplito.multiplicaPorDos(DATA_TEST), DATA_TEST*5);//error intencionado
 	}
 
-	@Test(dependsOnMethods={"multiplicaPorDos"})
+/*	@Test(dependsOnMethods={"multiplicaPorDos"})
 	@Parameters({"param_test"})
 	public void multiplicaPorNueve(int paramTest) {
 		Assert.assertNotNull(Ejemplito.multiplicaPorNueve(paramTest));
 		Assert.assertEquals(Ejemplito.multiplicaPorNueve(paramTest), paramTest*9);
-	}
+	}*/
 
 	//ejecuta el test para tantos elementos como tenga el dataProvider. Soporta Map
 	@Test(dataProvider = "provideNumbers")

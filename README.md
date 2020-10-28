@@ -19,6 +19,9 @@
 #### Microservices
 
 - CocktailsAndDrinks_Mocks. Mocks para tests unitarios. 
+    - Endpoints disponibles:
+        - http://localhost:8081/test
+        - http://localhost:8081/drink/all
 
 
 #####Bugs

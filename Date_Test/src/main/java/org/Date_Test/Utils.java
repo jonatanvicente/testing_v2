@@ -7,6 +7,10 @@ import org.apache.commons.lang3.time.DateUtils;
 
 public class Utils{
 
+	public static void main (String ar[]){
+		System.out.println(new Utils().isSameDay(new Date(), new Date()));
+	}
+
 	public static boolean isSameDay(Date date1, Date date2){
 		return DateUtils.isSameDay(date1, date2);
 	}

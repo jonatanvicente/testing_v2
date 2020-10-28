@@ -29,7 +29,6 @@ public class DniUtilTest{
 
 	//algoritmo numero 23: resto de dni/23
 	@Test()
-	@Parameters({"dni"})
 	public void testDni(int dni){
 
 		//ejecución

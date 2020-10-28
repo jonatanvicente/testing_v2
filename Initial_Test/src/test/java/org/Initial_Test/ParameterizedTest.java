@@ -40,7 +40,7 @@ public class ParameterizedTest{
 	
 
 	@Test
-	public void sum() {
+	public void sumTest() {
 		Ejemplito ej = new Ejemplito();
 		System.out.println("******* Ejecutado test: "+valueOne+" + "+valueTwo);
 		assertEquals(expected, ej.sum(valueOne, valueTwo), 0);

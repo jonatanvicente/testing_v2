@@ -73,16 +73,15 @@ public class EjemplitoTest {
 	}
 
 	@Test
-	@Parameters({"param_test"})
-	public void multiplicaPorCuatro(int paramTest) {
-		Assert.assertNotNull(Ejemplito.multiplicaPorCuatro(4));
-		Assert.assertEquals(Ejemplito.multiplicaPorCuatro(paramTest), paramTest*4);
+	public void multiplicaPorCuatro() {
+		Assert.assertNotNull(Ejemplito.multiplicaPorCuatro(DATA_TEST));
+		Assert.assertEquals(Ejemplito.multiplicaPorCuatro(DATA_TEST), DATA_TEST*4);
 	}
 
 	@Test
 	public void multiplicaPorDos() {
 		Assert.assertNotNull(Ejemplito.multiplicaPorDos(DATA_TEST));
-		//Assert.assertEquals(Ejemplito.multiplicaPorDos(DATA_TEST), DATA_TEST*5);//error intencionado
+		Assert.assertEquals(Ejemplito.multiplicaPorDos(DATA_TEST), DATA_TEST*2);
 	}
 
 /*	@Test(dependsOnMethods={"multiplicaPorDos"})
@@ -91,6 +90,12 @@ public class EjemplitoTest {
 		Assert.assertNotNull(Ejemplito.multiplicaPorNueve(paramTest));
 		Assert.assertEquals(Ejemplito.multiplicaPorNueve(paramTest), paramTest*9);
 	}*/
+
+	@Test(dependsOnMethods={"multiplicaPorDos"})
+	public void multiplicaPorNueve() {
+		Assert.assertNotNull(Ejemplito.multiplicaPorNueve(DATA_TEST));
+		Assert.assertEquals(Ejemplito.multiplicaPorNueve(DATA_TEST), DATA_TEST*9);
+	}
 
 	//ejecuta el test para tantos elementos como tenga el dataProvider. Soporta Map
 	@Test(dataProvider = "provideNumbers")

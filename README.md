@@ -22,7 +22,7 @@
     - Endpoints disponibles:
         - http://localhost:8081/test
         - http://localhost:8081/drink/all
-
+- CocktailsAndDrinks_JBehave. Adaptación de tests JBehave (tomado de https://www.baeldung.com/jbehave-rest-testing)
 
 #####Bugs
 

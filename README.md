@@ -24,10 +24,15 @@
         - http://localhost:8081/drink/all
 - CocktailsAndDrinks_JBehave. Adaptación de tests JBehave (tomado de https://www.baeldung.com/jbehave-rest-testing)
 
-#####Bugs
+##### Bugs
 
 - Error <i>"TestNG by default disables loading DTD from unsecured Urls".</i>
     - Es necesario añadir un JVM argument en la ejecución: -Dtestng.dtd.http=true
     - En IntelliJ: Run > Edit Configurations > add JVM argument
     - Véase https://github.com/cbeust/testng/issues/2022
 
+
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_EN.md) 
+ [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_ES.md) 
+  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct_CA.md) 
